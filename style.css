@@ -94,6 +94,12 @@
 
   /* ---------- HERO ---------- */
   #home{padding:170px 0 90px; position:relative;}
+  .profile-photo{
+    position:absolute; top:164px; right:max(28px, calc((100vw - 1080px) / 2 + 28px));
+    width:164px; height:164px; object-fit:cover; object-position:50% 50%; border-radius:50%;
+    border:3px solid var(--blue); padding:5px; background:var(--surface);
+    box-shadow:0 0 0 8px rgba(91,141,239,0.08), 0 18px 40px rgba(0,0,0,0.3);
+  }
   .status-bar{
     display:inline-flex; align-items:center; gap:10px;
     font-family:var(--mono); font-size:12px; color:var(--text-dim);
@@ -130,6 +136,11 @@
   .stat-num{font-family:var(--display); font-size:1.9rem; font-weight:700; color:var(--text);}
   .stat-label{font-family:var(--mono); font-size:11px; color:var(--text-faint); text-transform:uppercase; letter-spacing:.06em; margin-top:6px;}
   @media (max-width:700px){.stats-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:700px){
+    #home{padding-top:142px;}
+    .profile-photo{top:142px; right:22px; width:124px; height:124px;}
+    .status-bar{max-width:calc(100% - 150px); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+  }
 
   /* ---------- SECTION GENERIC ---------- */
   section{padding:100px 0;}
